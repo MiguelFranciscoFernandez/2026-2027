@@ -122,10 +122,59 @@ public class Ejercicio3_1 {
         System.out.println();
     }
 
-    /**/
+    /*
+     * Ejercicio 5: Escribe un programa que realice lo contrario que el anterior, es
+     * decir pide un número en
+     * letras y enseña un número.
+     * Aclaración: No es lo mismo la cadena "Uno" que "uno" o que "UNO", por lo
+     * tanto, para que el
+     * programa funcione correctamente deberías pasar todas las letras del nombre
+     * del número a
+     * mayúsculas o a minúsculas. Investiga cuál es la función del objeto String que
+     * nos permite realizar ese
+     * cambio.
+     */
     public static void ejercicio5() {
         System.out.println("=== Ejercicio 5 ===");
-
+        System.out.println("Escribe el numero");
+        String numero = scanner.nextLine();
+        switch (numero.toLowerCase()) {
+            case "cero":
+                System.out.println("0");
+                break;
+            case "uno":
+                System.out.println("1");
+                break;
+            case "dos":
+                System.out.println("2");
+                break;
+            case "tres":
+                System.out.println("3");
+                break;
+            case "cuatro":
+                System.out.println("4");
+                break;
+            case "cinco":
+                System.out.println("5");
+                break;
+            case "seis":
+                System.out.println("6");
+                break;
+            case "siete":
+                System.out.println("7");
+                break;
+            case "ocho":
+                System.out.println("8");
+                break;
+            case "nueve":
+                System.out.println("9");
+                break;
+            case "diez":
+                System.out.println("10");
+                break;
+            default:
+                System.out.println("Número no válido.");
+        }
     }
 
     /* */
@@ -156,8 +205,8 @@ public class Ejercicio3_1 {
         // ejercicio1();
         // ejercicio2();
         // ejercicio3();
-        ejercicio4();
-        // ejercicio5();
+        // ejercicio4();
+        ejercicio5();
         // ejercicio6();
         // ejercicio7();
         // ejercicio8();

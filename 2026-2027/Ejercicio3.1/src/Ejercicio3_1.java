@@ -78,7 +78,7 @@ public class Ejercicio3_1 {
      */
     public static void ejercicio4() {
         System.out.println("=== Ejercicio 4 ===");
-        int numero = random.nextInt(11);
+        int numero = random.nextInt(20);
         System.out.println("Número generado: " + numero);
         if (numero < 0 || numero > 10) {
             System.out.println("Número no válido.");

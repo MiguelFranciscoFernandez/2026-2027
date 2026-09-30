@@ -175,18 +175,89 @@ public class Ejercicio3_1 {
             default:
                 System.out.println("Número no válido.");
         }
+        System.out.println();
     }
 
-    /* */
+    /*
+     * Ejercicio 6: Random Escribe un programa que lea una variable entera mes y
+     * compruebe
+     * si el valor corresponde a un mes de 30 días, de 31 o de 28. Supondremos que
+     * febrero tiene
+     * 28 días. Se mostrará además el nombre del mes.
+     * Se debe comprobar que el valor introducido esté comprendido entre 1 y 12.
+     */
     public static void ejercicio6() {
         System.out.println("=== Ejercicio 6 ===");
+        int mes = random.nextInt(1, 13);
+        System.out.println("Mes generado: " + mes);
+        switch (mes) {
+            case 1:
+                System.out.println("Enero: 31 días");
+                break;
+            case 2:
+                System.out.println("Febrero: 28 días");
+                break;
+            case 3:
+                System.out.println("Marzo: 31 días");
+                break;
+            case 4:
+                System.out.println("Abril: 30 días");
+                break;
+            case 5:
+                System.out.println("Mayo: 31 días");
+                break;
+            case 6:
+                System.out.println("Junio: 30 días");
+                break;
+            case 7:
+                System.out.println("Julio: 31 días");
+                break;
+            case 8:
+                System.out.println("Agosto: 31 días");
+                break;
+            case 9:
+                System.out.println("Septiembre: 30 días");
+                break;
+            case 10:
+                System.out.println("Octubre: 31 días");
+                break;
+            case 11:
+                System.out.println("Noviembre: 30 días");
+                break;
+            case 12:
+                System.out.println("Diciembre: 31 días");
+                break;
+        }
+        System.out.println();
 
     }
 
-    /* */
+    /*
+     * Ejercicio 7: Random un programa que pida la nota de las tres evaluaciones, y
+     * si están aprobadas
+     * realizar la media para calcular la nota final. Evaluación aprobada >= 5. Si
+     * no, escribe que evaluación debe recuperar.
+     */
     public static void ejercicio7() {
         System.out.println("=== Ejercicio 7 ===");
-
+        double n1 = random.nextDouble(11);
+        double n2 = random.nextDouble(11);
+        double n3 = random.nextDouble(11);
+        System.out.println("Notas generadas: " + n1 + ", " + n2 + ", " + n3);
+        if (n1 >= 5 && n2 >= 5 && n3 >= 5) {
+            double media = (n1 + n2 + n3) / 3;
+            System.out.println("Media: " + media);
+        } else {
+            if (n1 < 5) {
+                System.out.println("Debes recuperar la primera evaluación.");
+            }
+            if (n2 < 5) {
+                System.out.println("Debes recuperar la segunda evaluación.");
+            }
+            if (n3 < 5) {
+                System.out.println("Debes recuperar la tercera evaluación.");
+            }
+        } 
     }
 
     /* */
@@ -206,7 +277,7 @@ public class Ejercicio3_1 {
         // ejercicio2();
         // ejercicio3();
         // ejercicio4();
-        ejercicio5();
+        // ejercicio5();
         // ejercicio6();
         // ejercicio7();
         // ejercicio8();

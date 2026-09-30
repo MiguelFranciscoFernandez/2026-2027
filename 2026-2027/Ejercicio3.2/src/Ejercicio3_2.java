@@ -240,9 +240,9 @@ public class Ejercicio3_2 {
      */
     public static void ejercicio7() {
         System.out.println("=== Ejercicio 7 ===");
-        double n1 = random.nextDouble(11);
-        double n2 = random.nextDouble(11);
-        double n3 = random.nextDouble(11);
+        double n1 = random.nextInt(11);
+        double n2 = random.nextInt(11);
+        double n3 = random.nextInt(11);
         System.out.println("Notas generadas: " + n1 + ", " + n2 + ", " + n3);
         if (n1 >= 5 && n2 >= 5 && n3 >= 5) {
             double media = (n1 + n2 + n3) / 3;
@@ -279,7 +279,7 @@ public class Ejercicio3_2 {
         // ejercicio4();
         // ejercicio5();
         // ejercicio6();
-        // ejercicio7();
+        ejercicio7();
         // ejercicio8();
         // ejercicio9();
         scanner.close();

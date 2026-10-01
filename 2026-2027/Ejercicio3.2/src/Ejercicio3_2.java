@@ -257,18 +257,48 @@ public class Ejercicio3_2 {
             if (n3 < 5) {
                 System.out.println("Debes recuperar la tercera evaluación.");
             }
-        } 
+        }
     }
 
-    /* */
+    /*
+     * Ejercicio 8: Escribe un programa que calcule el sueldo de un trabajador. Debe
+     * pedir el número de horas trabajadas este mes. Las primeras 150 horas se pagan
+     * a 10€ y a partir de ahí, las restantes horas que superen las 150 se pagan a
+     * 20€. Debe aparecer por pantalla el total del sueldo.
+     */
     public static void ejercicio8() {
         System.out.println("=== Ejercicio 8 ===");
+        int hrtab = random.nextInt(201);
+        System.out.println("Horas generadas: " + hrtab);
+        int sueldo;
+        if (hrtab <= 150) {
+            sueldo = hrtab * 10;
+        } else {
+            sueldo = 150 * 10 + (hrtab - 150) * 20;
+        }
+
+        System.out.println("Sueldo: " + sueldo + "€");
 
     }
 
-    /* */
+    /*
+     * Ejercicio 9: Escribe un programa que diga si un año es bisiesto. No deber
+     * permitir aceptar años negativos. Un año es bisiesto si cumple una de las
+     * siguientes reglas:
+     * 1. Divisible entre 4, divisible entre 100 y divisible entre 400.
+     * 2. Divisible entre 4, NO divisible entre 100.
+     */
     public static void ejercicio9() {
         System.out.println("=== Ejercicio 9 ===");
+        int anio = random.nextInt();
+        System.out.println("Año generado: " + anio);
+        if (anio < 0) {
+            System.out.println("Año no válido.");
+        } else if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 4 == 0 && anio % 100 == 0 && anio % 400 == 0)) {
+            System.out.println("El año " + anio + " es bisiesto.");
+        } else {
+            System.out.println("El año " + anio + " no es bisiesto.");
+        }
 
     }
 
@@ -279,7 +309,7 @@ public class Ejercicio3_2 {
         // ejercicio4();
         // ejercicio5();
         // ejercicio6();
-        ejercicio7();
+        // ejercicio7();
         // ejercicio8();
         // ejercicio9();
         scanner.close();

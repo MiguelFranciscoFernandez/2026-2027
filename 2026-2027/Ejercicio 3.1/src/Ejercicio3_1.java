@@ -170,8 +170,8 @@ public class Ejercicio3_1 {
         // ejercicio2();
         // ejercicio3();
         // ejercicio4();
-        // ejercicio5();
-        // ejercicio6();
+        ejercicio5();
+        ejercicio6();
 
         scanner.close();
     }

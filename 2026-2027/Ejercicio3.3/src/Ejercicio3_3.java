@@ -41,14 +41,9 @@ public class Ejercicio3_3 {
      */
     public static void ejercicio2() {
         System.out.println("Ejercicio 2");
-        int valor = sc.nextInt();
-        if (valor > 0) {
-            for (int i = 1; i <= valor; i++) {
-                System.out.println(i);
-            }
-        } else {
-            System.out.println("El valor ingresado no es positivo.");
-
+        int valor = random.nextInt(100) + 1;
+        for (int i = 1; i <= valor; i++) {
+            System.out.println(i);
         }
         System.out.println();
     }
@@ -61,7 +56,15 @@ public class Ejercicio3_3 {
 
     public static void ejercicio3() {
         System.out.println("Ejercicio 3");
-       
+        int suma = 0;
+        for (int i = 1; i <= 10; i++) {
+            int valor = random.nextInt(100) + 1;
+            suma += valor;
+        }
+        double promedio = suma / 10.0;
+        System.out.println("Suma: " + suma);
+        System.out.println("Promedio: " + promedio);
+        System.out.println();
     }
 
     /*
@@ -75,7 +78,13 @@ public class Ejercicio3_3 {
 
     public static void ejercicio4() {
         System.out.println("Ejercicio 4");
-       
+        String nombre = "JuanCarlos";
+        String intento;
+        do {
+            System.out.println("Introduce tu nombre;");
+            intento = sc.nextLine();
+        } while (!intento.equalsIgnoreCase(nombre));
+        System.out.println("¡Has adivinado el nombre!");
     }
     /*
      * Diseña una aplicación que simule la tirada de dos dados y muestre al usuario

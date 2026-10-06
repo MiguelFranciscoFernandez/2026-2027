@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Ejercicio3_3 {
-   static Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
     static Random random = new Random();
 
     // Todos los ejercicios con el random
@@ -12,7 +12,7 @@ public class Ejercicio3_3 {
      * al 100. (Debes hacerlo
      * con las tres estructuras iterativas vistas: while, do while y for)
      */
-     public static void ejercicio1() {
+    public static void ejercicio1() {
         System.out.println("Ejercicio 1");
 
         System.out.println("Usando while:");
@@ -85,9 +85,11 @@ public class Ejercicio3_3 {
             intento = sc.nextLine();
         } while (!intento.equalsIgnoreCase(nombre));
         System.out.println("¡Has adivinado el nombre!");
+        System.out.println();
     }
     /*
-     * Diseña una aplicación que simule la tirada de dos dados y muestre al usuario
+     * Ejercicio 5: Diseña una aplicación que simule la tirada de dos dados y
+     * muestre al usuario
      * el resultado de la tirada.
      * Si los dos dados tienen el mismo número debe mostrar un mensaje indicando que
      * el resultado es el mismo.
@@ -98,6 +100,19 @@ public class Ejercicio3_3 {
 
     public static void ejercicio5() {
         System.out.println("Ejercicio 5");
+        String respuesta;
+        do {
+            int dado1 = random.nextInt(6) + 1;
+            int dado2 = random.nextInt(6) + 1;
+            System.out.println("Dado 1: " + dado1);
+            System.out.println("Dado 2: " + dado2);
+            if (dado1 == dado2) {
+                System.out.println("¡Los dados tienen el mismo número!");
+            }
+            System.out.println("¿Quieres tirar los dados de nuevo? (s/n)");
+            respuesta = sc.nextLine();
+        } while (respuesta.equalsIgnoreCase("s") || respuesta.equalsIgnoreCase("si"));
+        System.out.println();
     }
 
     /*
@@ -111,6 +126,20 @@ public class Ejercicio3_3 {
 
     public static void ejercicio6() {
         System.out.println("Ejercicio 6");
+        int numeroSecreto = random.nextInt(100) + 1;
+        int intento;
+        do {
+            System.out.println("Adivina el número (entre 1 y 100):");
+            intento = sc.nextInt();
+            if (intento < numeroSecreto) {
+                System.out.println("El número es mayor.");
+            } else if (intento > numeroSecreto) {
+                System.out.println("El número es menor.");
+            } else {
+                System.out.println("¡Has acertado!");
+            }
+        } while (intento != numeroSecreto);
+        System.out.println();
     }
 
     /*
@@ -127,6 +156,29 @@ public class Ejercicio3_3 {
 
     public static void ejercicio7() {
         System.out.println("Ejercicio 7");
+        int hora = random.nextInt(24);
+        int minutos = random.nextInt(60);
+        int segundos = 0;
+        while (true) {
+            System.out.printf("%02d:%02d:%02d\n", hora, minutos, segundos);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            segundos++;
+            if (segundos == 60) {
+                segundos = 0;
+                minutos++;
+                if (minutos == 60) {
+                    minutos = 0;
+                    hora++;
+                    if (hora == 24) {
+                        hora = 0;
+                    }
+                }
+            }
+        }
     }
 
     /*
@@ -137,6 +189,13 @@ public class Ejercicio3_3 {
 
     public static void ejercicio8() {
         System.out.println("Ejercicio 8");
+        int numero = random.nextInt(10) + 1;
+        long factorial = 1;
+        for (int i = 1; i <= numero; i++) {
+            factorial *= i;
+        }
+        System.out.println("El factorial de " + numero + " es: " + factorial);
+        System.out.println();
     }
 
     /*
@@ -153,7 +212,14 @@ public class Ejercicio3_3 {
 
     public static void ejercicio9() {
         System.out.println("Ejercicio 9");
- }
+        int altura = random.nextInt(10) + 1;
+        for (int i = 1; i <= altura; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String[] args) {
         // ejercicio1();
@@ -162,10 +228,10 @@ public class Ejercicio3_3 {
         // ejercicio4();
         // ejercicio5();
         // ejercicio6();
-        // ejercicio7();
+         // ejercicio7();
         // ejercicio8();
         // ejercicio9();
         sc.close();
     }
-    
+
 }

@@ -190,7 +190,7 @@ public class Ejercicio3_3 {
     public static void ejercicio8() {
         System.out.println("Ejercicio 8");
         int numero = random.nextInt(10) + 1;
-        long factorial = 1;
+        int factorial = 1;
         for (int i = 1; i <= numero; i++) {
             factorial *= i;
         }

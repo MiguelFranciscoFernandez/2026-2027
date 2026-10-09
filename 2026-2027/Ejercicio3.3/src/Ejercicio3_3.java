@@ -190,12 +190,32 @@ public class Ejercicio3_3 {
     public static void ejercicio8() {
         System.out.println("Ejercicio 8");
         int numero = random.nextInt(10) + 1;
-        int factorial = 1;
+        long factorial = 1;
         for (int i = 1; i <= numero; i++) {
             factorial *= i;
         }
         System.out.println("El factorial de " + numero + " es: " + factorial);
         System.out.println();
+    }
+    /*
+     * Ejercicio8_2: Escriba un programa que calcule el factorial de un número.
+     * El factorial de un número es igual al producto de todos los números enteros
+     * positivos desde 1 hasta dicho número. Con recursividad
+     */
+
+    public static void ejercicio8_2() {
+        System.out.println("Ejercicio 8_2");
+        int numero = random.nextInt(10) + 1;
+        long factorial = calcularFactorial(numero);
+        System.out.println("El factorial de " + numero + " es: " + factorial);
+        System.out.println();
+    }
+
+    public static int calcularFactorial(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * calcularFactorial(n - 1);
     }
 
     /*
@@ -213,7 +233,20 @@ public class Ejercicio3_3 {
     public static void ejercicio9() {
         System.out.println("Ejercicio 9");
         int altura = random.nextInt(10) + 1;
+        System.out.println("Altura: " + altura);
+
+        // Escalera normal
         for (int i = 1; i <= altura; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        // Escalera invertida
+        for (int i = altura; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
@@ -230,6 +263,7 @@ public class Ejercicio3_3 {
         // ejercicio6();
         // ejercicio7();
         // ejercicio8();
+        // ejercicio8_2();
         // ejercicio9();
         sc.close();
     }
